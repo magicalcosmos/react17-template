@@ -1,0 +1,14 @@
+
+{
+  "BASE_ADDRESS": "127.0.0.1/api/v1",
+  "API_ENDPOINT": "http://127.0.0.1/api/v1/gql/query",
+  "WS_ENDPOINT": "ws://127.0.0.1/api/v1/ws",
+  "STATIC_ENDPOINT": "http://127.0.0.1/elephant",
+  "SSO": {
+    "CLIENT_ID": "websso",  
+    "API": "/info",
+    "TOKEN_TYPE": "Bearer",
+    "RESPONSE_TYPE": "token"
+  }
+}
+

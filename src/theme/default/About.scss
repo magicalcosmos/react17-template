@@ -1,0 +1,59 @@
+@import "../function.scss";
+@import "../variable.scss";
+$left: 300px;
+.about {
+  @include setWH(100%, 100%);
+  background: url(~@s/images/about-bg-small.svg) no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  .logo {
+    background: url(~@s/images/logo-black.svg) no-repeat;
+    background-size: contain;
+    height: 48px;
+    margin: 190px 0 0 $left;
+  }
+  .name,
+  .info {
+    margin-left: $left;
+  }
+  .name {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 100px 0 37px $left;
+  }
+  .info {
+    color: $medium-color;
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+  .about-bottom {
+    @include setHL(60px);
+    background: rgba(18, 18, 18, 0.9);
+    bottom: 0;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 300;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1900px) {
+  $left: 170px;
+  .about {
+    background: url(~@s/images/about-bg-small.svg) no-repeat;
+    background-size: cover;
+    .logo {
+      margin: 100px 0 0 $left;
+    }
+    .name,
+    .info {
+      margin-left: $left;
+    }
+    .name {
+      margin-top: 70px;
+    }
+  }
+}

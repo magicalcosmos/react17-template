@@ -1,0 +1,138 @@
+
+[[file:http://10.88.223.155:9093/iLock.png]]
+* React template
+** Description
+This project is for iLockVerifier and key skills: React17, Vite2, Mobx6,
+Axios, Typescript,React Testing Library
+
+Note: we should add unit test for each component, all test files are
+suffixed with '.test.'.
+** Stucture
+  | configuration | API environment and vite compile environment |
+  |--- env | API environment directory |
+  |------ prod.env.js | production environment API configuration |
+  |------ rdev.env.js | staging environment API configuration |
+  |------ rstaging.env.js | staging environment API configuration |
+  |------ rtest.env.js | test environment API configuration |
+  |------ sample.env.js | sample environment API configuration for local developer |
+  |--- vite.config.base.ts | common vite config |
+  |--- vite.config.dev.ts | development vite config |
+  |--- vite.config.prod.ts | production vite config |
+  |--- vite.config.staging.ts | staging vite config |
+  |--- vite.config.test.ts | test vite config |
+  | src | soruce files |
+  |--- api | interactive with backend API |
+  |--- components | common components |
+  |--- i18n | internationalization |
+  |--- interface | common interface defined |
+  |--- layouts | common layout |
+  |--- lib | third party library |
+  |--- pwa | progress web application for future |
+  |--- routes | entire project router |
+  |--- schemas | graphQL schema |
+  |--- store | data status cache |
+  |--- theme | the theme for entire project |
+  |------ default theme | default theme |
+  |------ base.scss | common style as usual |
+  |------ function.scss | common css function |
+  |------ index.scss | export style |
+  |------ reset.scss | reset style for compatibility|
+  |------ variable.scss | variables for common style |
+  |--- utils | common function tools |
+  |------ ajax | call backend API functions |
+  |------ auth | authorization |
+  |------ dict | project dictionary |
+  |------ localStorage | local storage functions |
+  |------ log | print log |
+  |--- views | pages directory |
+  |--- App.tsx | page components entry |
+  |--- css.d.ts | css configuration |
+  |--- main.tsx  | main entry |
+  |--- react-i18next.d.ts | Special handle for internationalization |
+  |--- reportWeb.tsx | prepare for future |
+  |--- setupTests.tsx | unit test entry |
+  |--- vite-env.d.ts | vite environment configuration |
+  | static | static file |
+  |--- iconfont | icon font library by UI customize |
+  | .editorconfig | edit common rule |
+  | .eslintignore | eslint ignore |
+  | .eslintrc.js | eslint configuration |
+  | .gitignore | git ignore file |
+  | .huskrc | husk configuration for commit and push |
+  | .travis.yml | continuous integration for production |
+  | index.html | entry for project |
+  | Makefile | comiple config by make |
+  | package.json | project dependency packages and version info |
+  | prettierrc | rules for js, ts |
+  | README.org | project document |
+  | tsconfig.json | typescript compiler options |
+
+** Build setup
+  - Development environment
+  #+BEGIN_SRC shell
+   npm run r:dev
+  #+END_SRC
+  - Test environment
+  #+BEGIN_SRC shell
+   npm run r:test
+  #+END_SRC
+  - Staging environment
+  #+BEGIN_SRC shell
+   npm run r:staging
+  #+END_SRC
+  - Package program
+  #+BEGIN_SRC shell
+   npm run deploy
+   # or
+   make
+  #+END_SRC
+  - Format code style 
+  #+BEGIN_SRC shell
+   npm run lint
+  #+END_SRC
+  - Format code style with fix solution
+  #+BEGIN_SRC shell
+   npm run lint:fix
+  #+END_SRC
+  - Test in development environment
+  #+BEGIN_SRC shell
+   npm run test:dev
+  #+END_SRC
+  - Test in test environment
+  #+BEGIN_SRC shell
+   npm run test:test
+  #+END_SRC
+  - Test in staging environment
+  #+BEGIN_SRC shell
+   npm run test:test
+  #+END_SRC
+  - Test in production environment
+  #+BEGIN_SRC shell
+   npm run test:prod
+  #+END_SRC
+  - Test in development environment, and watching all test cases
+  #+BEGIN_SRC shell
+   npm run test:watch
+  #+END_SRC
+  - Test in development environment, and debug with chrome.After run below
+    command and open chrome, input about:inspect
+  #+BEGIN_SRC shell
+   npm run test:debug
+  #+END_SRC
+  - Test with reporter 
+  #+BEGIN_SRC shell
+   npm run test:reporter
+  #+END_SRC
+  - CI test for production
+  #+BEGIN_SRC shell
+   npm run ci:test
+  #+END_SRC
+  - CI deploy for production
+  #+BEGIN_SRC shell
+   npm run ci:deploy
+  #+END_SRC
+  - CI test and CI deploy for production
+  #+BEGIN_SRC shell
+   npm run ci:ilock
+  #+END_SRC
+

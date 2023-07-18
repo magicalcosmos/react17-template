@@ -1,0 +1,76 @@
+@import "./function.scss";
+@import "./variable.scss";
+.pop-tips {
+  border-radius: 5px;
+  overflow: hidden;
+
+  .ant-modal-body {
+    position: relative;
+    padding: 53px 0 22px 0;
+  }
+
+  .ant-modal-confirm-title {
+    @include setHL(29px);
+    background: $popup-bg;
+    color: #fff;
+    font-size: 12px;
+    left: 0;
+    padding-left: 15px;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 100%;
+  }
+
+  .ant-modal-confirm-body {
+    text-align: center;
+  }
+
+  .ant-modal-confirm-content {
+    color: $popup-content;
+    display: inline-block;
+    position: relative;
+    top: 3px;
+    margin-left: 15px;
+    vertical-align: top;
+  }
+
+  .close {
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    z-index: 2;
+
+    .iconclose {
+      color: #fff;
+      cursor: pointer;
+      font-size: 10px;
+    }
+  }
+
+  .icontips-filling {
+    color: $popup-warn;
+    font-size: 26px;
+  }
+
+  .ant-modal-confirm-btns {
+    float: none;
+    text-align: center;
+
+    .ant-btn {
+      @include setWHL(80px, 24px);
+      border-radius: 5px;
+      padding: 0;
+    }
+
+    .ant-btn-primary {
+      background: $primary-color;
+      border-color: $primary-color;
+
+      &:hover {
+        background: $btn-hover-color;
+      }
+    }
+  }
+}

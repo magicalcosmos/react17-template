@@ -1,0 +1,19 @@
+@import "../function.scss";
+@import "../variable.scss";
+.license-exception {
+  @include setWH(956px, 520px);
+  margin: 190px auto 0;
+  &-img {
+    @include setWH(370px, 160px);
+    background: url("~@s/images/license-exception.png") no-repeat center center;
+    background-size: contain;
+    margin: 0 auto;
+  }
+  &-tip {
+    font-weight: 400;
+    color: $dark-color;
+    font-size: 12px;
+    margin-top: 48px;
+    text-align: center;
+  }
+}
